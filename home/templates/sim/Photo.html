@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo</title>
+    <link rel="stylesheet" href="{% static 'home/css/photo.css' %}">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="./index.html"><div class="header-logo">Cactus Photo</div></a>
+    </header>
+    <div class="photo">
+        <h2>Landscape</h2>
+        <div class="content">
+            <div>Sakura</div>
+            <div style="display: flex; flex-direction: column; gap: 5px;">
+                <div class="imgcontainer">
+                    <img src="{% static 'home/img/sakura1.jpg' %}" alt="" class="img"/>
+                    <div class="imginfo">
+                        ISO100 85mm f/4.5 1/500s
+                    </div>
+                </div>
+                <div class="imgcontainer">
+                    <img src="{% static 'home/img/sakura2.jpg' %}" alt="" />
+                    <div class="imginfo">
+                        ISO100 85mm f/5.6 1/500s
+                    </div>
+            </div>
+        </div>
+
+        <h2>Motorcycle</h2>
+
+        <div class="content">
+            <div>KTM Duke390</div>
+            <div class="imgcontainer">
+                <img src="{% static 'home/img/Duke390.jpg' %}" alt="">
+                <div class="imginfo">
+                    ISO100 85mm f/4.5 1/500s
+                </div>
+            </div>
+            
+        </div>
+        <div class="content">
+            <div>Harley Davidson XL1200cx</div>
+            <div class="imgcontainer">
+                <img src="{% static 'home/img/cx.jpg' %}" alt="">
+                <div class="imginfo">
+                    ISO100 85mm f/2.0 1/400s
+                </div>
+        </div>
+        <div class="content">
+            <div>KTM 1290 SuperDukeR</div>
+            <div class="imgcontainer">
+                <img src="{% static 'home/img/sdr.jpg' %}" alt="">
+                <div class="imginfo">
+                    ISO800 66mm f/3.5 1/13s
+                </div>
+        </div>
+        <div class="content">
+            <div>KTM 1290 SuperDukeR Blue.ver</div>
+            <div class="imgcontainer">
+                <img src="{% static 'home/img/blue.jpg' %}" alt="">    
+                <div class="imginfo">
+                    ISO320 70mm f/2.8 1/8000s
+                </div>
+        </div>
+
+        <h2>Car</h2>
+
+        <div class="content">
+            <div>MAZDA NB Roadster 1.8RS</div>
+            <div class="imgcontainer">
+                <img src="{% static 'home/img/nb.jpg' %}" alt="">
+                <div class="imginfo">
+                    ISO1000 70mm f/2.8 3/5s
+                </div>
+        </div>
+
+        <h2>Animals</h2>
+
+        <div class="content">
+            <div>Dog</div>
+            <div class="imgcontainer">
+                <img src="{% static 'home/img/Dog.jpg' %}" alt="">
+                <div class="imginfo">
+                    ISO1000 70mm f/2.8 1/250s
+                </div>
+                <div class="imgcontainer">
+                    <img src="{% static 'home/img/Dogs.jpg' %}" alt="">
+                    <div class="imginfo">
+                        ISO1000 70mm f/9.0 1/13s
+                    </div>
+        </div>
+    </div>
+    <script>
+        $(".imgcontainer").hover(function(){
+            $(".imginfo").fadeToggle()
+        })
+    </script>
+</body>
+</html>
